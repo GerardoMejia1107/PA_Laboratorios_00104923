@@ -4,7 +4,7 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SH110X.h>
 
-// Dirección I2C de la pantalla (usa 0x3C o 0x3D según el módulo)
+// Definiciones para la OLED
 #define i2c_Address 0x3C 
 
 #define SCREEN_WIDTH 128 // ancho OLED en px
@@ -14,7 +14,7 @@
 // Inicializa pantalla
 Adafruit_SH1106G display = Adafruit_SH1106G(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-// ==== Configuración LM35 ====
+// Constantes  para el sensor   
 const int pinLM35 = A0;              // pin analógico donde está conectado LM35 Vout
 const unsigned long intervalo = 1000; // intervalo de actualización en ms
 unsigned long ultimaMillis = 0;
